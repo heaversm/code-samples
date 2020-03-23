@@ -1,0 +1,61 @@
+@import 'base.scss';
+
+.wrapper {
+  padding: 35px 30px;
+  width: 100%;
+  height: 100%;
+
+  @include medium {
+    padding: 35px getColumns(1, $bp-medium);
+  }
+
+  @include large {
+    padding: 35px getColumns(1, $bp-large);
+  }
+}
+
+.cartIconWrapper {
+  position: absolute;
+  top: 35px;
+  right: 30px;
+
+  @include medium {
+    right: getColumns(1, $bp-medium);
+  }
+
+  @include large {
+    right: getColumns(1, $bp-large);
+  }
+}
+
+.title {
+  width: 100%;
+  text-align: center;
+  margin: 0 0 35px;
+
+  @include medium {
+    margin: 0 0 45px;
+  }
+}
+
+.products {
+  display: flex;
+  margin: 0;
+  justify-content: space-between;
+  flex-wrap: wrap;
+
+  @include large {
+    flex-wrap: nowrap;
+  }
+}
+
+.thumbnails {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 100%;
+
+  @include large {
+    width: getColumns(15, $bp-large);
+  }
+}
